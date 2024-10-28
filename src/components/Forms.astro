@@ -1,17 +1,20 @@
 ---
-const { beskrivelse, header, placeholder1, placeholder2 } = Astro.props;
+const { beskrivelse, overskrift, placeholder1, placeholder2 } = Astro.props;
 import H3 from "../components/H3.astro";
 import Button from "../components/Button.astro";
+import Brodtekst from "./Brodtekst.astro";
 ---
 
-<article class="bg-white w-40 border-rounded">
-  <slot>
-    <H3>{header}</H3>
-    <p>{beskrivelse}</p>
-    <div class="">
-      <input type="text" name="form_felt" placeholder={placeholder1} />
-      <input type="text" name="form_felt" placeholder={placeholder2} />
-    </div>
-  </slot>
-  <Button />
+<article class="w-96 mx-auto mt-32 p-4 space-y-6">
+  <H3 tekst={overskrift}></H3>
+  <Brodtekst tekst={beskrivelse} />
+  <div class="space-y-2">
+    <!-- Ny container -->
+    <form class="space-y-2 grid grid-cols-1">
+      <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full" />
+      <input type="text" name="form_felt" placeholder={placeholder2} class="rounded-full" />
+    </form>
+    <Button class="w-full rounded-full">Støt nu</Button>
+    <!-- W-full og rounded-full her også -->
+  </div>
 </article>
