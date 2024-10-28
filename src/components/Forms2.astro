@@ -6,13 +6,15 @@ import Brodtekst from "./Brodtekst.astro";
 ---
 
 <article class="w-[382px] h-[485px] mt-[37px] p-4 flex flex-col justify-center space-y-10 bg-slate-400 rounded-[37px]">
-  <H3 tekst={overskrift}></H3>
-  <Brodtekst tekst={beskrivelse} />
+  <H3 tekst={overskrift} />
   <div class="space-y-2">
+     <div class="">
+        <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
+        <label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
+      </div>
     <!-- Ny container -->
     <form class="space-y-2 grid grid-cols-1">
       <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full" />
-      <input type="text" name="form_felt" placeholder={placeholder2} class="rounded-full" />
     </form>
     <Button class="w-[286px]">Støt nu</Button>
   </div>
