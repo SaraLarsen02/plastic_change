@@ -1,6 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import SkraaBokse from "../components/SkraaBokse.astro";
+import H1 from "../components/H1.astro";
+import H2 from "../components/H2.astro";
+import H3 from "../components/H3.astro";
+import Brodtekst from "../components/Brodtekst.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -12,5 +17,14 @@ import thumbsup from "../assets/images/thumbsup.png";
     <Button>Klik!</Button>
     <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
     <Image src={thumbsup} alt="" />
+  </article>
+  <article>
+    <SkraaBokse />
+  </article>
+  <article class="bg-black">
+    <H1 tekst="VERDEN DRUKNER I UNØDVENDIG PLASTIK" />
+    <H2 tekst="PLASTIKFORURENING" />
+    <H3 tekst="PLASTIK TRUER LIVET I HAVET" />
+    <Brodtekst tekst="Her er en brødtekst" />
   </article>
 </MainLayout>
