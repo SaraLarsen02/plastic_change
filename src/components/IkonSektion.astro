@@ -1,5 +1,5 @@
 ---
-const { overskrift, brodtekst } = Astro.props;
+const { overskrift, brodtekst, ikon, imageUrl } = Astro.props;
 import H3 from "../components/H3.astro";
 import Brodtekst from "../components/Brodtekst.astro";
 import { Image } from "astro:assets";
@@ -7,9 +7,14 @@ import icon_1 from "../assets/images/icon_1.png";
 ---
 
 <section class="bg-blue-400 grid grid-cols-2">
-  <Image class="max-w-[150px]" src={icon_1} alt="Ikon" />
+  <!-- <Image class="max-w-[150px]" src={icon_1} alt="Ikon" /> -->
+  <img src={imageUrl} alt="Ikon" class="max-w-[107px]" />
   <div class="">
     <H3 tekst={overskrift} />
     <Brodtekst tekst={brodtekst} />
   </div>
 </section>
+
+<!-- <div class="flex justify-center">
+  <img src={imageUrl} alt="Dynamic" class="rounded-lg shadow-lg" />
+</div> -->
