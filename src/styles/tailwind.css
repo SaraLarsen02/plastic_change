@@ -11,4 +11,32 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  .skraa_1 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 13.9vw solid #041737;
+  }
+
+  .skraa_2 {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-top: 13.9vw solid #041737;
+  }
+
+  .skraa_3 {
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-bottom: 13.9vw solid #041737;
+  }
+
+  .skraa_4 {
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-top: 13.9vw solid #041737;
+  }
 }

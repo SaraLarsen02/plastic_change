@@ -1,6 +1,27 @@
 ---
+import H3 from "../components/H3.astro";
+import Brodtekst from "./Brodtekst.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<section class="bg-slate-600 grid grid-cols-3">
+  <div>
+    <H3 tekst="KONTAKT" />
+    <div>
+      <Brodtekst tekst="info@plasticchange.org" />
+      <Brodtekst tekst="+45 22 66 72 46" />
+    </div>
+    <div>
+      <Brodtekst tekst="Telefontid:" />
+      <Brodtekst tekst="Mandag - fredag" />
+      <Brodtekst tekst="Kl. 10:00 - 15:00" />
+    </div>
+  </div>
+  <div>
+    <H3 tekst="TILMELD NYHEDSBREV" />
+  </div>
+  <div>
+    <Image src={logo} alt="Logo" />
+  </div>
+</section>
