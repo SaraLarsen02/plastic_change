@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import SkraaBokse from "../components/SkraaBokse.astro";
 import SkraaBokse2 from "../components/SkraaBokse2.astro";
+import IkonSektion from "../components/IkonSektion.astro";
 import H1 from "../components/H1.astro";
 import H2 from "../components/H2.astro";
 import H3 from "../components/H3.astro";
@@ -10,6 +11,7 @@ import Brodtekst from "../components/Brodtekst.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import icon_1 from "../assets/images/icon_1.png";
 import Forms from "../components/Forms.astro";
 ---
 
@@ -26,6 +28,15 @@ import Forms from "../components/Forms.astro";
     <H3 tekst="PLASTIK TRUER LIVET I HAVET" />
     <Brodtekst tekst="Her er en brødtekst" />
   </article>
+  <section>
+    <IkonSektion overskrift="Hej" brodtekst="se her" />
+    <IkonSektion />
+    <IkonSektion />
+    <IkonSektion />
+    <IkonSektion />
+    <IkonSektion />
+    <IkonSektion />
+  </section>
   <SkraaBokse />
   <SkraaBokse2 />
   <Forms header="STØT SOM VIRKSOMHED" beskrivelse="Ved at blive en sponsor hos os, bidrager din virksomhed til vores indsats med at beskytte naturen mod plastikforurening." placeholder1="Virksomhed" placeholder2="CVR-nummer" />
