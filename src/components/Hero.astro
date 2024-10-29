@@ -2,12 +2,12 @@
 import H1 from "../components/H1.astro";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import skildpadde from "../assets/images/hero_skildpadde.png";
-import pose from "../assets/images/hero_pose.png";
-import flaske from "../assets/images/hero_flaske.png";
-import fisk from "../assets/images/hero_fisk.png";
-import pingvin from "../assets/images/hero_pingvin.png";
-import delefin from "../assets/images/hero_delefin.png";
+import skildpadde from "../assets/images/b_havskilpadde1.png";
+import pose from "../assets/images/b_pose.png";
+import flaske from "../assets/images/b_flaske.png";
+import fisk from "../assets/images/b_fisk.png";
+import pingvin from "../assets/images/b_pingvin.png";
+import delefin from "../assets/images/b_delefin.png";
 ---
 
 <section class="bg-slate-600">
@@ -17,12 +17,12 @@ import delefin from "../assets/images/hero_delefin.png";
     <H1 tekst="UNØDVENDIG PLASTIK" />
     <Button>Støt</Button>
   </div>
-  <div class="grid grid-cols-10 grid-rows-5 h-[750px]">
-    <Image class="col-start-1 row-start-1 col-span-4 row-span-3" src={skildpadde} alt="Billede af svømmende skildpadde" />
-    <Image class="col-start-3 row-start-4 col-span-1 row-span-2" src={pose} alt="Billede af gul pose" />
-    <Image class="col-start-6 row-start-1 col-span-1 row-span-1" src={flaske} alt="Billede af gul pose" />
-    <Image class="col-start-5 row-start-2 col-span-2 row-span-2" src={fisk} alt="Billede af gul pose" />
-    <Image class="col-start-5 row-start-4 col-span-4 row-span-2" src={pingvin} alt="Billede af gul pose" />
-    <Image class="col-start-7 row-start-1 col-span-4 row-span-3" src={delefin} alt="Billede af gul pose" />
+  <div class="grid grid-cols-10 grid-rows-5 w-full">
+    <Image class="col-start-1 row-start-1 col-span-4 row-span-3 h-[408px] w-auto" src={skildpadde} alt="Billede af svømmende skildpadde" />
+    <Image class="col-start-3 row-start-4 col-span-1 row-span-2 h-[208px] w-auto" src={pose} alt="Billede af gul pose" />
+    <Image class="col-start-6 row-start-1 col-span-1 row-span-1 h-[200px] w-auto rotate-45" src={flaske} alt="Billede af gul pose" />
+    <Image class="col-start-5 row-start-2 col-span-2 row-span-2 h-[200px] w-auto" src={fisk} alt="Billede af gul pose" />
+    <Image class="col-start-5 row-start-4 col-span-4 row-span-2 h-[338px] w-auto rotate-45" src={pingvin} alt="Billede af gul pose" />
+    <Image class="col-start-7 row-start-1 col-span-4 row-span-3 h-[600px] w-auto" src={delefin} alt="Billede af gul pose" />
   </div>
 </section>
