@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import SkraaBokse from "../components/SkraaBokse.astro";
 import SkraaBokse2 from "../components/SkraaBokse2.astro";
+import SkraaBokse3 from "../components/SkraaBokse3.astro";
 import IkonSektion from "../components/IkonSektion.astro";
 import H1 from "../components/H1.astro";
 import H2 from "../components/H2.astro";
@@ -11,6 +12,8 @@ import Brodtekst from "../components/Brodtekst.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import baad from "../assets/images/baad.png";
+import krabbe from "../assets/images/krabbe.png";
 import icon_1 from "../assets/images/icon_1.png";
 import icon_2 from "../assets/images/icon_2.png";
 import Forms from "../components/Forms.astro";
@@ -26,16 +29,68 @@ const image7 = "public/icon_7.png";
 ---
 
 <MainLayout title="Titel">
-  <section>
+  <article class="bg-slate-500">
     <Hero />
-  </section>
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Støt nu</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-    <Image src={thumbsup} alt="" />
+    <section class="grid grid-cols-2">
+      <div>
+        <H2 tekst="PLASTIKFORURENING" />
+        <Brodtekst
+          tekst="Siden 1950’erne har vi produceret mere end 9 milliarder ton plastik. Heraf er størstedelen blevet brugt til engangsemballager og -produkter med kort levetid og lav markedsværdi. Disse emballager og produkter forurener i hele deres livscyklus: fra udvindingen af olie, til produktion, transport, forbrug, og når de ender til forbrænding eller i naturen. "
+        />
+        <Brodtekst tekst="Alt dette for kun at blive brugt én gang. Indenfor de næste 20 år forventes den globale plastikproduktion at fordobles, og i samme periode forventes plastikforureningen at firedobles. Derfor skal vi have lukket for hanen med engangsplastik nu." />
+      </div>
+      <div>
+        <H2 tekst="PLASTIK TRUER LIVET I HAVET" />
+        <Brodtekst tekst="Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender i maver på hvaler, fugle og fisk. " />
+        <Brodtekst
+          tekst="Plastikforurening er at finde overalt, fra dybhavet og Marianergraven til toppen af Mount Everest til indlandsisen på Arktis. Det udgør en større og større trussel for vores natur- og havmiljø, økosystemer, samt klimaet og menneskers sundhed. Og det bliver kun værre – det forventes at i 2040 vil plastikforurening være tredoblet, og 80% af den forurening vil udgøre engangsplastik."
+        />
+      </div>
+    </section>
+    <SkraaBokse />
+    <section class="grid grid-cols-2">
+      <div>
+        <H2 tekst="VIDSTE DU, AT DER ER FUNDET PLASTIK I MERE 50% AF VERDENS HAVSKILPADDER" />
+        <H3 tekst="... OG NU HAR FORSKERE OGSÅ FUNDET MIKROPLAST I VORES MAD OG DRIKKEVARER." />
+      </div>
+      <div>
+        <Image class="max-w-[456px]" src={baad} alt="Billede af båd" />
+      </div>
+    </section>
+    <section>
+      <H2 tekst="HVORDAN KAN DU GØRE EN FORSKEL?" />
+      <div class="grid grid-cols-2">
+        <IkonSektion overskrift="DIT INDKØB" brodtekst="Tag mulepose med og sig nej tak til plastikposer." imageUrl={image1} />
+        <IkonSektion overskrift="DIN VANDFLASKE" brodtekst="Brug drikkedunk og undgå købevand." imageUrl={image2} />
+        <IkonSektion overskrift="DIN MÆLK" brodtekst="Køb mælk uden skrulåg." imageUrl={image3} />
+        <IkonSektion overskrift="DIN FEST" brodtekst="Drop engangsservice, balloner og sugerør." imageUrl={image4} />
+        <IkonSektion overskrift="DIN TØJVASK" brodtekst="Fyld maskinen, så du slider mindre på tøjet." imageUrl={image5} />
+        <IkonSektion overskrift="DINE PLEJEPRODUKTER" brodtekst="Køb i store beholdere frem for mange små." imageUrl={image6} />
+        <IkonSektion overskrift="DIT TOILETBESØG" brodtekst="Kun tre ting i toilettet - tis, lort og papir. " imageUrl={image7} />
+      </div>
+      <div>
+        <Image class="max-w-[456px]" src={baad} alt="Billede af båd" />
+      </div>
+    </section>
+    <SkraaBokse2 />
+    <section class="grid grid-cols-2">
+      <div>
+        <H2 tekst="GIV ET BIDRAG TIL PLASTIC CHANGE" />
+        <Brodtekst tekst="Plastic Change er din dedikererede partner for en bæredygtig fremtid uden plastikforurening. Ved at give et bidrag, bidrager din virksomhed til vores indsats med at beskytte havmiljøet, naturen og folkesundheden mod plastikforurening. " />
+      </div>
+      <div>
+        <Image class="max-w-[456px]" src={krabbe} alt="Billede af en rød krabbe" />
+      </div>
+      <section class="gap-[52px] flex justify-center">
+        <Forms2 overskrift="PRIVAT STØTTE" placeholder1="Andet beløb" />
+        <Forms overskrift="STØT SOM VIRKSOMHED" beskrivelse="Ved at blive en sponsor hos os, bidrager din virksomhed til vores indsats med at beskytte naturen mod plastikforurening." placeholder1="Virksomhed" placeholder2="CVR-nummer" />
+        <Forms overskrift="LAV ET TESTAMENTE" beskrivelse="Hvis du ønsker at støtte arbejdet for en bedre klode kan du betænke Plastic Change i dit testamente." placeholder1="Fornavn" placeholder2="Efternavn" />
+      </section>
+    </section>
+    <SkraaBokse3 />
   </article>
-  <article class="bg-black">
+
+  <!-- <article class="bg-black">
     <H1 tekst="VERDEN DRUKNER I UNØDVENDIG PLASTIK" />
     <H2 tekst="PLASTIKFORURENING" />
     <H3 tekst="PLASTIK TRUER LIVET I HAVET" />
@@ -53,8 +108,8 @@ const image7 = "public/icon_7.png";
   <SkraaBokse />
   <SkraaBokse2 />
   <section class="gap-[52px] flex justify-center">
-  <Forms2 overskrift="PRIVAT STØTTE" placeholder1="Andet beløb" />
-  <Forms overskrift="STØT SOM VIRKSOMHED" beskrivelse="Ved at blive en sponsor hos os, bidrager din virksomhed til vores indsats med at beskytte naturen mod plastikforurening." placeholder1="Virksomhed" placeholder2="CVR-nummer" />
-  <Forms overskrift="LAV ET TESTAMENTE" beskrivelse="Hvis du ønsker at støtte arbejdet for en bedre klode kan du betænke Plastic Change i dit testamente." placeholder1="Fornavn" placeholder2="Efternavn"></Forms>
-</section>
+    <Forms2 overskrift="PRIVAT STØTTE" placeholder1="Andet beløb" />
+    <Forms overskrift="STØT SOM VIRKSOMHED" beskrivelse="Ved at blive en sponsor hos os, bidrager din virksomhed til vores indsats med at beskytte naturen mod plastikforurening." placeholder1="Virksomhed" placeholder2="CVR-nummer" />
+    <Forms overskrift="LAV ET TESTAMENTE" beskrivelse="Hvis du ønsker at støtte arbejdet for en bedre klode kan du betænke Plastic Change i dit testamente." placeholder1="Fornavn" placeholder2="Efternavn" />
+  </section> -->
 </MainLayout>
