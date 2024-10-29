@@ -3,6 +3,8 @@ const { beskrivelse, overskrift, placeholder1, placeholder2 } = Astro.props;
 import H3 from "../components/H3.astro";
 import Button from "../components/Button.astro";
 import Brodtekst from "./Brodtekst.astro";
+
+
 ---
 
 <article class="w-[382px] h-[485px] mt-[37px] p-4 flex flex-col justify-center space-y-10 bg-white rounded-[37px]">
@@ -14,12 +16,12 @@ import Brodtekst from "./Brodtekst.astro";
   </div>
   <div class="space-y-2">
     <!-- Ny container -->
-    <form class="space-y-2 grid grid-cols-1">
+    <form class="space-y-2 grid grid-cols-1" netlify>
       <div class="flex justify-center">
-        <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full border-2 border-[#A6A6A6] w-[284px]" />
+        <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full border-2 border-[#A6A6A6] w-[284px]" netlify />
       </div>
       <div class="flex justify-center">
-        <input type="text" name="form_felt" placeholder={placeholder2} class="rounded-full border-2 border-[#A6A6A6] w-[284px]" />
+        <input type="text" name="form_felt" placeholder={placeholder2} class="rounded-full border-2 border-[#A6A6A6] w-[284px]" netlify/>
       </div>
     </form>
     <div class="flex justify-center w-full">
@@ -27,3 +29,5 @@ import Brodtekst from "./Brodtekst.astro";
     </div>
   </div>
 </article>
+
+
