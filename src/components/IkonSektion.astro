@@ -4,9 +4,9 @@ import H3 from "../components/H3.astro";
 import Brodtekst from "../components/Brodtekst.astro";
 ---
 
-<section class="grid grid-cols-2">
-  <img src={imageUrl} alt="Ikon" class="max-w-[107px]" />
-  <div class="">
+<section class="grid grid-cols-6">
+  <img src={imageUrl} alt="Ikon" class="max-w-[115%] col-start-1 col-span-1" />
+  <div class="col-start-2 col-span-5 content-center pl-5">
     <H3 tekst={overskrift} />
     <Brodtekst tekst={brodtekst} />
   </div>
