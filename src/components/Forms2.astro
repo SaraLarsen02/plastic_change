@@ -5,7 +5,9 @@ import Button from "../components/Button.astro";
 ---
 
 <article class="w-[382px] h-[485px] mt-[37px] p-4 flex flex-col justify-center space-y-10 bg-slate-400 rounded-[37px]">
-  <H3 tekst={overskrift} />
+  <div class="flex justify-center">
+  <p class="antonio text-black text-[25px] tracking-[2.75px] leading-[40px] w-[284px]">{overskrift}</p>
+    </div>
   <div class="space-y-2">
     <div class="flex justify-center">
       <input type="checkbox" id="Månedligt" name="Månedligt" class="rounded-full w-[28px] h-[28px] border-2 border-[#A6A6A6]" />
@@ -58,7 +60,7 @@ import Button from "../components/Button.astro";
       <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full border-2 border-[#A6A6A6]" />
     </form>
     <div class="flex justify-center">
-    <Button class="w-[286px]">Støt nu</Button>
+      <Button class="w-[286px]">Støt nu</Button>
     </div>
   </div>
 </article>
