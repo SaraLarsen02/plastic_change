@@ -1,21 +1,64 @@
 ---
-const { beskrivelse, overskrift, placeholder1, placeholder2 } = Astro.props;
+const { beskrivelse, overskrift, placeholder1 } = Astro.props;
 import H3 from "../components/H3.astro";
 import Button from "../components/Button.astro";
-import Brodtekst from "./Brodtekst.astro";
 ---
 
 <article class="w-[382px] h-[485px] mt-[37px] p-4 flex flex-col justify-center space-y-10 bg-slate-400 rounded-[37px]">
   <H3 tekst={overskrift} />
   <div class="space-y-2">
-     <div class="">
-        <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
-        <label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
+    <div class="flex justify-center">
+      <input type="checkbox" id="Månedligt" name="Månedligt" class="rounded-full w-[28px] h-[28px] border-2 border-[#A6A6A6]" />
+      <label for="nyhedsbrev">Månedligt</label>
+      <div class="gap-[29px]"></div>
+      <input type="checkbox" id="én_gang" name="én_gang" class="rounded-full w-[28px] h-[28px] border-2 border-[#A6A6A6]" />
+      <label for="nyhedsbrev">Én gang</label>
+    </div>
+    <!-- Checkbokse med tal -->
+    <article class="flex justify-center">
+      <div class="flex justify-center">
+        <label class="relative cursor-pointer flex items-center">
+          <!-- Checkbox -->
+          <input type="checkbox" class="hidden peer" />
+
+          <!-- Checkbox visuel (firkant) med tekst -->
+          <div class="w-20 h-20 bg-white border-2 border-[#A6A6A6] rounded-full flex items-center justify-center text-black peer-checked:bg-[#FF8400] peer-checked:text-black transition-colors">
+            <!-- Tekst inde i checkboxen -->
+            <span>50</span>
+          </div>
+        </label>
       </div>
-    <!-- Ny container -->
+      <div class="flex items-center">
+        <label class="relative cursor-pointer flex items-center">
+          <!-- Checkbox -->
+          <input type="checkbox" class="hidden peer" />
+
+          <!-- Checkbox visuel (firkant) med tekst -->
+          <div class="w-20 h-20 bg-white border-2 border-[#A6A6A6] rounded-full flex items-center justify-center text-black peer-checked:bg-[#FF8400] peer-checked:text-black transition-colors">
+            <!-- Tekst inde i checkboxen -->
+            <span>75</span>
+          </div>
+        </label>
+      </div>
+      <div class="flex items-center">
+        <label class="relative cursor-pointer flex items-center">
+          <!-- Checkbox -->
+          <input type="checkbox" class="hidden peer" />
+
+          <!-- Checkbox visuel (firkant) med tekst -->
+          <div class="w-20 h-20 bg-white border-2 border-[#A6A6A6] rounded-full flex items-center justify-center text-black peer-checked:bg-[#FF8400] peer-checked:text-black transition-colors">
+            <!-- Tekst inde i checkboxen -->
+            <span>125</span>
+          </div>
+        </label>
+      </div>
+    </article>
+
     <form class="space-y-2 grid grid-cols-1">
-      <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full" />
+      <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full border-2 border-[#A6A6A6]" />
     </form>
+    <div class="flex justify-center">
     <Button class="w-[286px]">Støt nu</Button>
+    </div>
   </div>
 </article>

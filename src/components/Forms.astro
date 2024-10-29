@@ -6,14 +6,24 @@ import Brodtekst from "./Brodtekst.astro";
 ---
 
 <article class="w-[382px] h-[485px] mt-[37px] p-4 flex flex-col justify-center space-y-10 bg-slate-400 rounded-[37px]">
-  <H3 tekst={overskrift}></H3>
-  <Brodtekst tekst={beskrivelse} />
+    <div class="flex justify-center">
+  <p class="antonio text-black text-[25px] tracking-[2.75px] leading-[40px] w-[284px]">{overskrift}</p>
+    </div>
+  <div class="flex justify-center">
+  <p class="text-black text-[16px] tracking-[1.98px] leading-[25px] w-[284px]">{beskrivelse}</p>
+  </div>
   <div class="space-y-2">
     <!-- Ny container -->
     <form class="space-y-2 grid grid-cols-1">
-      <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full" />
-      <input type="text" name="form_felt" placeholder={placeholder2} class="rounded-full" />
+      <div class="flex justify-center">
+        <input type="text" name="form_felt" placeholder={placeholder1} class="rounded-full border-2 border-[#A6A6A6] w-[284px]" />
+      </div>
+      <div class="flex justify-center">
+        <input type="text" name="form_felt" placeholder={placeholder2} class="rounded-full border-2 border-[#A6A6A6] w-[284px]" />
+      </div>
     </form>
-    <Button class="w-[286px]">Støt nu</Button>
+    <div class="flex justify-center w-full">
+      <Button class="w-full">Støt nu</Button>
+    </div>
   </div>
 </article>
