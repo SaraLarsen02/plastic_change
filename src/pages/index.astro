@@ -15,6 +15,7 @@ import icon_1 from "../assets/images/icon_1.png";
 import icon_2 from "../assets/images/icon_2.png";
 import Forms from "../components/Forms.astro";
 import Forms2 from "../components/Forms2.astro";
+import Hero from "../components/Hero.astro";
 const image1 = "public/icon_1.png";
 const image2 = "public/icon_2.png";
 const image3 = "public/icon_3.png";
@@ -25,6 +26,9 @@ const image7 = "public/icon_7.png";
 ---
 
 <MainLayout title="Titel">
+  <section>
+    <Hero />
+  </section>
   <article>
     <h1>Index overskrift</h1>
     <Button>Støt nu</Button>
@@ -49,5 +53,5 @@ const image7 = "public/icon_7.png";
   <SkraaBokse />
   <SkraaBokse2 />
   <Forms overskrift="STØT SOM VIRKSOMHED" beskrivelse="Ved at blive en sponsor hos os, bidrager din virksomhed til vores indsats med at beskytte naturen mod plastikforurening." placeholder1="Virksomhed" placeholder2="CVR-nummer" />
-  <Forms2/>
+  <Forms2 />
 </MainLayout>
