@@ -3,32 +3,31 @@ import { Image } from "astro:assets";
 import logo from "../assets/images/logo.svg";
 ---
 
-<header>
+<header class="bg-[#041737]">
   <div class="flex place-content-between px-5 py-2">
     <Image class="max-w-24" src={logo} alt="Logo" />
     <div x-data="{ showmenu: false }">
       <div id="navbar" class="relative lg:relative z-50">
         <button id="burgermenu" x-on:click="showmenu = !showmenu">
-          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" :class="showmenu ? 'rotate-45 transition-transform' : 'rotate-0 transition-transform'">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" :class="showmenu ? 'rotate-45 transition-transform' : 'rotate-0 transition-transform'">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" x-show="!showmenu"></path>
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" x-show="showmenu"></path>
           </svg>
         </button>
       </div>
 
-      <nav id="mobilmenu" class="fixed top-0 bottom-0 right-0 left-0 bg-slate-50 z-40 transition-all duration-300" x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
+      <nav id="mobilmenu" class="fixed top-0 bottom-0 right-0 left-0 bg-[#FF8400] text-[#041737] z-40 transition-all duration-300" x-show="showmenu" x-transition x-on:click.outside="showmenu = false">
         <ul class="flex flex-col h-full justify-center [&_li]:text-center [&_li]:py-2 [&_li]:list-none">
-          <div class="md:columns-2 gap-8 pt-4 max-w-screen-md mx-auto">
+          <div class="pt-4 max-w-screen-md mx-auto antonio text-[40px]">
             <!-- Menu Links -->
-            <li><a href="#hvadErPlastik" target="_self" class="underline" @click="showmenu = false">Hvad er plastikforurening?</a></li>
-            <li><a href="#hvadErProblemet" class="underline" target="_self" @click="showmenu = false">Hvad er problemet?</a></li>
-            <li><a href="#hvadKanDuGoere" target="_self" class="underline" @click="showmenu = false">Hvad kan du gøre?</a></li>
-            <li><a href="#hvadErPC" class="underline" target="_self" @click="showmenu = false">Hvad er Plastic Change?</a></li>
-            <li><a href="#givBidrag" target="_self" class="underline" @click="showmenu = false">Støt med et bidrag.</a></li>
+            <li><a href="#hvadErPlastik" target="_self" class="hover:underline decoration-2 decoration-[#041737]" @click="showmenu = false">Hvad er plastikforurening?</a></li>
+            <li><a href="#hvadErProblemet" target="_self" class="hover:underline decoration-2 decoration-[#041737]" @click="showmenu = false">Hvad er problemet?</a></li>
+            <li><a href="#hvadKanDuGoere" target="_self" class="hover:underline decoration-2 decoration-[#041737]" @click="showmenu = false">Hvad kan du gøre?</a></li>
+            <li><a href="#hvadErPC" target="_self" class="hover:underline decoration-2 decoration-[#041737]" @click="showmenu = false">Hvad er Plastic Change?</a></li>
+            <li><a href="#givBidrag" target="_self" class="hover:underline decoration-2 decoration-[#041737]" @click="showmenu = false">Støt med et bidrag.</a></li>
           </div>
         </ul>
       </nav>
     </div>
   </div>
 </header>
-
