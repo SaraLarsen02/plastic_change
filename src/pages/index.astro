@@ -56,7 +56,7 @@ const image7 = "public/icon_7.png";
           </div>
         </div>
       </section>
-      <SkraaBokse />
+      <SkraaBokse/>
     </section>
     <section class="bg-custom-gradient space-y-14">
       <section class="px-[10%] pt-40 grid grid-cols-9">
@@ -146,3 +146,13 @@ const image7 = "public/icon_7.png";
     <Forms overskrift="LAV ET TESTAMENTE" beskrivelse="Hvis du ønsker at støtte arbejdet for en bedre klode kan du betænke Plastic Change i dit testamente." placeholder1="Fornavn" placeholder2="Efternavn" />
   </section> -->
 </MainLayout>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+   inView(".fotoinview", () => {
+      animate(".fotoinview", { x: [-2000, 0] }, { duration: 1.5 });
+   })
+   inView(".fotoinview2", () => {
+      animate(".fotoinview2", { x: [2000, 0] }, { duration: 1.5 });
+   })
+</script>
