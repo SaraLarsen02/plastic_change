@@ -36,7 +36,7 @@ const image7 = "public/icon_7.png";
   <article>
     <section class="bg-custom-gradient pb-0">
       <Hero />
-      <section class="px-[10%] py-20 pb-40 grid grid-cols-2 gap-36" id="hvadErPlastik">
+      <section class="px-[10%] py-[-200px] pb-40 grid grid-cols-2 gap-36" id="hvadErPlastik">
         <div class="grid gap-8">
           <H2 tekst="PLASTIKFORURENING" />
           <div class="grid gap-5">
@@ -56,7 +56,7 @@ const image7 = "public/icon_7.png";
           </div>
         </div>
       </section>
-      <SkraaBokse/>
+      <SkraaBokse />
     </section>
     <section class="bg-custom-gradient space-y-14">
       <section class="px-[10%] pt-40 grid grid-cols-9">
@@ -148,11 +148,38 @@ const image7 = "public/icon_7.png";
 </MainLayout>
 
 <script>
+  // Animation på skrå bokse
   import { animate, stagger, inView, scroll, timeline } from "motion";
-   inView(".fotoinview", () => {
-      animate(".fotoinview", { x: [-2000, 0] }, { duration: 1.5 });
-   })
-   inView(".fotoinview2", () => {
-      animate(".fotoinview2", { x: [2000, 0] }, { duration: 1.5 });
-   })
+  inView(".fotoinview", () => {
+    animate(".fotoinview", { x: [-2000, 0] }, { duration: 1.5 });
+  });
+  inView(".fotoinview2", () => {
+    animate(".fotoinview2", { x: [2000, 0] }, { duration: 1.5 });
+  });
+
+  // Animation på hero
+  scroll(animate(".parallaxgrafik1", { y: [0, -200] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik2", { x: [-0, -300], y: [500, -500] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik3", { x: [-0, 100], y: [200, -200] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik4", { x: [300, -300], y: [600, -600] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik5", { x: [1100, -600], y: [-200, -200] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik6", { x: [-0, 0], y: [150, -200] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
 </script>

@@ -8,6 +8,9 @@ import flaske from "../assets/images/b_flaske.png";
 import fisk from "../assets/images/b_fisk.png";
 import pingvin from "../assets/images/b_pingvin.png";
 import delefin from "../assets/images/b_delefin.png";
+import boat1 from "../assets/images/b_svommefodder.png";
+import boat2 from "../assets/images/b_svommefodder.png";
+import boat3 from "../assets/images/b_svommefodder.png";
 ---
 
 <section class="pt-20">
@@ -21,17 +24,30 @@ import delefin from "../assets/images/b_delefin.png";
       <Button>Støt</Button>
     </div>
   </div>
-  <div class="mt-0 grid grid-cols-10 grid-rows-5 w-full">
+  <!-- <div class="mt-0 grid grid-cols-10 grid-rows-5 w-full">
     <Image class="parallaxgrafik1 col-start-1 row-start-2 col-span-4 row-span-3 h-[408px] w-auto" src={skildpadde} alt="Billede af svømmende skildpadde" />
     <Image class="parallaxgrafik2 col-start-3 row-start-4 col-span-1 row-span-2 h-[208px] w-auto" src={pose} alt="Billede af gul pose" />
     <Image class="parallaxgrafik3 col-start-6 row-start-1 col-span-1 row-span-1 h-[200px] w-auto rotate-45" src={flaske} alt="Billede af gul pose" />
     <Image class="parallaxgrafik4 col-start-5 row-start-2 col-span-2 row-span-2 h-[200px] w-auto" src={fisk} alt="Billede af gul pose" />
     <Image class="parallaxgrafik5 col-start-5 row-start-4 col-span-4 row-span-2 h-[338px] w-auto rotate-45" src={pingvin} alt="Billede af gul pose" />
     <Image class="parallaxgrafik6 col-start-7 row-start-1 col-span-4 row-span-3 h-[600px] w-auto" src={delefin} alt="Billede af gul pose" />
-  </div>
+  </div> -->
+  <section class="parallaxgrafik fullwidthsection">
+    <div class="mt-0 h-screen w-full grid grid-cols-10 grid-rows-5 overflow-hidden" style="background-image: url('/water_background.jpg');">
+      <!-- <Image src={boat1} alt="" class="col-start-2 parallaxgrafik1" />
+      <Image src={boat2} alt="" class="col-start-5 parallaxgrafik2" />
+      <Image src={boat3} alt="" class="col-start-3 col-span-2 parallaxgrafik3" /> -->
+      <Image class="parallaxgrafik1 col-start-1 row-start-2 col-span-4 row-span-3 h-[408px] w-auto z-50" src={skildpadde} alt="Billede af svømmende skildpadde" />
+      <Image class="parallaxgrafik2 col-start-3 row-start-4 col-span-1 row-span-2 h-[208px] w-auto" src={pose} alt="Billede af gul pose" />
+      <Image class="parallaxgrafik3 col-start-6 row-start-1 col-span-1 row-span-1 h-[200px] w-auto rotate-45" src={flaske} alt="Billede af gul pose" />
+      <Image class="parallaxgrafik4 col-start-5 row-start-2 col-span-2 row-span-2 h-[200px] w-auto" src={fisk} alt="Billede af gul pose" />
+      <Image class="parallaxgrafik5 col-start-5 row-start-4 col-span-4 row-span-2 h-[338px] w-auto rotate-45" src={pingvin} alt="Billede af gul pose" />
+      <Image class="parallaxgrafik6 col-start-7 row-start-1 col-span-4 row-span-3 h-[600px] w-auto" src={delefin} alt="Billede af gul pose" />
+    </div>
+  </section>
 </section>
 
-<script>
+<!-- <script>
   // Importere animate
   import { animate, stagger, inView, scroll, timeline } from "motion";
   // Parallaxgrafik
@@ -59,4 +75,4 @@ import delefin from "../assets/images/b_delefin.png";
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });
-</script>
+</script> -->
