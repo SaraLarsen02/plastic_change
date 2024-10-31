@@ -151,10 +151,10 @@ const image7 = "public/icon_7.png";
   // Animation på skrå bokse
   import { animate, stagger, inView, scroll, timeline } from "motion";
   inView(".fotoinview", () => {
-    animate(".fotoinview", { x: [-2000, 0] }, { duration: 1.5 });
+    animate(".fotoinview", { y: [2000, 0] }, { duration: 0.75 });
   });
   inView(".fotoinview2", () => {
-    animate(".fotoinview2", { x: [2000, 0] }, { duration: 1.5 });
+    animate(".fotoinview2", { y: [4000, 0] }, { duration: 0.75 });
   });
 
   // Animation på hero
