@@ -6,38 +6,37 @@ import logo from "../assets/images/logo.svg";
 import Button from "../components/Button.astro";
 ---
 
-<section class="bg-slate-600 flex flex-wrap place-content-between px-[107px] py-[98px]">
+<section class="flex flex-wrap place-content-between px-[107px] py-[98px]">
   <article class="">
-  <div>
-    <H3 tekst="KONTAKT" />
     <div>
-      <Brodtekst tekst="info@plasticchange.org" />
-      <Brodtekst tekst="+45 22 66 72 46" />
+      <H3 tekst="KONTAKT" />
+      <div>
+        <Brodtekst tekst="info@plasticchange.org" />
+        <Brodtekst tekst="+45 22 66 72 46" />
+      </div>
+      <div>
+        <Brodtekst tekst="Telefontid:" />
+        <Brodtekst tekst="Mandag - fredag" />
+        <Brodtekst tekst="Kl. 10:00 - 15:00" />
+      </div>
     </div>
-    <div>
-      <Brodtekst tekst="Telefontid:" />
-      <Brodtekst tekst="Mandag - fredag" />
-      <Brodtekst tekst="Kl. 10:00 - 15:00" />
-    </div>
-  </div>
   </article>
   <article class="">
-  <div>
-    <H3 tekst="TILMELD NYHEDSBREV" />
-    <form class="space-y-2 grid grid-cols-1" netlify>
-      <div class="py-4">
-        <input type="text" name="form_felt" placeholder="Skriv email" class="rounded-full border-2 border-[#A6A6A6] w-[284px]" />
-      </div>
-       <div class="">
-      <Button class="" type="submit">Tilmeld</Button>
+    <div>
+      <H3 tekst="TILMELD NYHEDSBREV" />
+      <form class="space-y-2 grid grid-cols-1" netlify>
+        <div class="py-4">
+          <input type="text" name="form_felt" placeholder="Skriv email" class="rounded-full border-2 border-[#A6A6A6] w-[284px]" />
+        </div>
+        <div class="">
+          <Button class="" type="submit">Tilmeld</Button>
+        </div>
+      </form>
     </div>
-    </form>
-   
-  </div>
   </article>
   <article class="self-end">
-  <div>
-    <Image src={logo} alt="Logo" />
-  </div>
-</article>
+    <div>
+      <Image src={logo} alt="Logo" />
+    </div>
+  </article>
 </section>

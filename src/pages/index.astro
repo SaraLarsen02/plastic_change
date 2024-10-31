@@ -5,6 +5,7 @@ import SkraaBokse from "../components/SkraaBokse.astro";
 import SkraaBokse2 from "../components/SkraaBokse2.astro";
 import SkraaBokse3 from "../components/SkraaBokse3.astro";
 import IkonSektion from "../components/IkonSektion.astro";
+import Footer from "../components/Footer.astro";
 import H1 from "../components/H1.astro";
 import H2 from "../components/H2.astro";
 import H3 from "../components/H3.astro";
@@ -33,7 +34,7 @@ const image7 = "public/icon_7.png";
 
 <MainLayout title="Titel">
   <article>
-    <section class="bg-custom-gradient pb-96 relative">
+    <section class="bg-custom-gradient pb-0">
       <Hero />
       <section class="px-[10%] py-20 pb-40 grid grid-cols-2 gap-36" id="hvadErPlastik">
         <div class="grid gap-8">
@@ -55,10 +56,10 @@ const image7 = "public/icon_7.png";
           </div>
         </div>
       </section>
+      <SkraaBokse />
     </section>
-    <SkraaBokse />
-    <section class="bg-custom-gradient">
-      <section class="px-[10%] pt-[50%] grid grid-cols-9">
+    <section class="bg-custom-gradient space-y-14">
+      <section class="px-[10%] pt-40 grid grid-cols-9">
         <div class="mt-14 space-y-10 col-start-1 col-span-4">
           <div>
             <H2 tekst="VIDSTE DU, AT DER ER FUNDET " />
@@ -74,7 +75,7 @@ const image7 = "public/icon_7.png";
           <Image class="" src={plastik_skilpadde} alt="Billede af båd" />
         </div>
       </section>
-      <section class="px-[10%] py-[6%] pb-96 space-y-14" id="hvadKanDuGoere">
+      <section class="px-[10%] py-[8%] pb-0 space-y-14" id="hvadKanDuGoere">
         <H2 tekst="HVORDAN KAN DU GØRE EN FORSKEL?" class="" />
         <div class="grid grid-cols-2 gap-[5%]">
           <div>
@@ -98,10 +99,10 @@ const image7 = "public/icon_7.png";
           </div>
         </div>
       </section>
+      <SkraaBokse2 />
     </section>
-    <SkraaBokse2 />
-    <section class="bg-custom-gradient pb-[1300px]">
-      <section class="px-[10%] pt-[65%] pb-[16%]">
+    <section class="bg-custom-gradient">
+      <section class="px-[10%] pt-24 pb-64">
         <div class="grid grid-cols-10 grid-rows-5">
           <div class="col-start-1 row-start-3 col-span-6 row-span-3 space-y-5" id="givBidrag">
             <H2 tekst="GIV ET BIDRAG TIL PLASTIC CHANGE" />
@@ -117,8 +118,9 @@ const image7 = "public/icon_7.png";
           <Forms overskrift="LAV ET TESTAMENTE" beskrivelse="Hvis du ønsker at støtte arbejdet for en bedre klode kan du betænke Plastic Change i dit testamente." placeholder1="Fornavn" placeholder2="Efternavn" />
         </section>
       </section>
+      <SkraaBokse3 />
+      <Footer />
     </section>
-    <SkraaBokse3 />
   </article>
 
   <!-- <article class="bg-black">
