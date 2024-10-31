@@ -22,11 +22,41 @@ import delefin from "../assets/images/b_delefin.png";
     </div>
   </div>
   <div class="mt-0 grid grid-cols-10 grid-rows-5 w-full">
-    <Image class="col-start-1 row-start-2 col-span-4 row-span-3 h-[408px] w-auto" src={skildpadde} alt="Billede af svømmende skildpadde" />
-    <Image class="col-start-3 row-start-4 col-span-1 row-span-2 h-[208px] w-auto" src={pose} alt="Billede af gul pose" />
-    <Image class="col-start-6 row-start-1 col-span-1 row-span-1 h-[200px] w-auto rotate-45" src={flaske} alt="Billede af gul pose" />
-    <Image class="col-start-5 row-start-2 col-span-2 row-span-2 h-[200px] w-auto" src={fisk} alt="Billede af gul pose" />
-    <Image class="col-start-5 row-start-4 col-span-4 row-span-2 h-[338px] w-auto rotate-45" src={pingvin} alt="Billede af gul pose" />
-    <Image class="col-start-7 row-start-1 col-span-4 row-span-3 h-[600px] w-auto" src={delefin} alt="Billede af gul pose" />
+    <Image class="parallaxgrafik1 col-start-1 row-start-2 col-span-4 row-span-3 h-[408px] w-auto" src={skildpadde} alt="Billede af svømmende skildpadde" />
+    <Image class="parallaxgrafik2 col-start-3 row-start-4 col-span-1 row-span-2 h-[208px] w-auto" src={pose} alt="Billede af gul pose" />
+    <Image class="parallaxgrafik3 col-start-6 row-start-1 col-span-1 row-span-1 h-[200px] w-auto rotate-45" src={flaske} alt="Billede af gul pose" />
+    <Image class="parallaxgrafik4 col-start-5 row-start-2 col-span-2 row-span-2 h-[200px] w-auto" src={fisk} alt="Billede af gul pose" />
+    <Image class="parallaxgrafik5 col-start-5 row-start-4 col-span-4 row-span-2 h-[338px] w-auto rotate-45" src={pingvin} alt="Billede af gul pose" />
+    <Image class="parallaxgrafik6 col-start-7 row-start-1 col-span-4 row-span-3 h-[600px] w-auto" src={delefin} alt="Billede af gul pose" />
   </div>
 </section>
+
+<script>
+  // Importere animate
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+  // Parallaxgrafik
+  scroll(animate(".parallaxgrafik1", { y: [800, -600] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik2", { x: [-100, 100], y: [800, -1800] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik3", { x: [-1500, 2000], y: [400, 0] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik4", { x: [-1500, 2000], y: [400, 0] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik5", { x: [-1500, 2000], y: [400, 0] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+  scroll(animate(".parallaxgrafik6", { x: [-1500, 2000], y: [400, 0] }), {
+    target: document.querySelector(".parallaxgrafik"),
+    offset: ["start end", "end start"],
+  });
+</script>
