@@ -114,7 +114,7 @@ const { href = "#", target = "_self" } = Astro.props;
             <Brodtekst tekst="Plastic Change er din dedikererede partner for en bæredygtig fremtid uden plastikforurening. Ved at give et bidrag, bidrager din virksomhed til vores indsats med at beskytte havmiljøet, naturen og folkesundheden mod plastikforurening. " />
           </div>
           <div class="col-start-7 row-start-1 col-span-4 row-span-4">
-            <Image class="pulsate-fwd max-w-[150%] pl-20" src={krabbe} alt="Billede af en rød krabbe" />
+            <Image class="max-w-[150%] pl-20 krabbeinview" src={krabbe} alt="Billede af en rød krabbe" />
           </div>
         </div>
         <section class="gap-[52px] flex justify-center">
@@ -160,6 +160,11 @@ const { href = "#", target = "_self" } = Astro.props;
   });
   inView(".fotoinview2", () => {
     animate(".fotoinview2", { y: [4000, 0] }, { duration: 0.75 });
+  });
+
+  // krabbe ind animation
+  inView(".krabbeinview", () => {
+    animate(".krabbeinview", { x: [2000, 0] }, { duration: 1 });
   });
 
   // Animation på hero
