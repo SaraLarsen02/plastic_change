@@ -36,6 +36,10 @@ const { href = "#", target = "_self" } = Astro.props;
 <MainLayout title="Titel">
   <article class="cursor cursor-handcursor">
     <section class="bg-custom-gradient pb-0">
+      <svg class="progressbar" width="70" height="70" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
+      <circle cx="50" cy="50" r="30" pathLength="1" class="progress" />
+    </svg>
       <Hero />
       <section class="px-[10%] py-[-200px] pb-40 grid grid-cols-2 gap-36" id="hvadErPlastik">
         <div class="grid gap-8">
@@ -185,6 +189,7 @@ const { href = "#", target = "_self" } = Astro.props;
   });
 
   // Klik-Forsvind
+  scroll(animate(".progress", { strokeDasharray: ["0,1", "1,1"] }));
 </script>
 
 <style></style>

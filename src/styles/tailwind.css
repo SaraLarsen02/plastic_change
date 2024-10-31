@@ -154,3 +154,25 @@
   }
   
 }
+.progressbar {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 15%;
+  fill: none;
+}
+
+.bg {
+   stroke: #041737;
+}
+.progress {
+  stroke: #FF8400;
+  stroke-dasharray: 0, 1;
+}
+

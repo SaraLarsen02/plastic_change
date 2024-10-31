@@ -9,7 +9,7 @@ import logo from "../assets/images/logo2.svg";
     <div x-data="{ showmenu: false }">
       <div id="navbar" class="relative lg:relative z-50">
         <button id="burgermenu" x-on:click="showmenu = !showmenu">
-          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" :class="showmenu ? 'rotate-45 transition-transform' : 'rotate-0 transition-transform'">
+          <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" :class="showmenu ? 'rotate-45 transition-transform' : 'rotate-0 transition-transform'">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" x-show="!showmenu"></path>
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" x-show="showmenu"></path>
           </svg>
