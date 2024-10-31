@@ -10,6 +10,9 @@ export default {
                                radial-gradient(circle at 93.68% 11.42%, #112C56 0%, 42%, rgba(17, 44, 86, 0) 70%),
                                radial-gradient(circle at 48.90% 49.52%, #000000 0%, 100%, rgba(0, 0, 0, 0) 100%)`,
       },
+      cursor: {
+        handcursor: "url(public/cursor_smiley.svg) 25 25, pointer",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],

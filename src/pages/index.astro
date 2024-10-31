@@ -30,11 +30,11 @@ const image4 = "public/icon_4.png";
 const image5 = "public/icon_5.png";
 const image6 = "public/icon_6.png";
 const image7 = "public/icon_7.png";
-import React, { useState } from "react";
+const { href = "#", target = "_self" } = Astro.props;
 ---
 
 <MainLayout title="Titel">
-  <article>
+  <article class="cursor cursor-handcursor">
     <section class="bg-custom-gradient pb-0">
       <Hero />
       <section class="px-[10%] py-[-200px] pb-40 grid grid-cols-2 gap-36" id="hvadErPlastik">
@@ -95,7 +95,7 @@ import React, { useState } from "react";
           <div></div>
           <div class="grid grid-cols-4 grid-rows-2">
             <Image class="pulsate-fwd col-start-1 col-span-1 row-span-2" src={sohest} alt="Billede af søhest" />
-            <Image class="pulsate-fwd2 col-start-2 row-start-2 col-span-1 row-span-1 cursor-pointer" src={pose} alt="Billede af pose" />
+            <Image class="hover:invisible pulsate-fwd2 col-start-2 row-start-2 col-span-1 row-span-1" src={pose} alt="Billede af pose" />
             <Image class="pulsate-fwd3 col-start-3 col-span-2" src={svommefodder} alt="Billede af svømmefødder" />
           </div>
         </div>
