@@ -11,7 +11,7 @@ export default {
                                radial-gradient(circle at 48.90% 49.52%, #000000 0%, 100%, rgba(0, 0, 0, 0) 100%)`,
       },
       cursor: {
-        handcursor: "url(public/cursor_smiley.svg) 25 25, pointer",
+        handcursor: "url(public/curser.png) 25 25, pointer",
       },
     },
   },
